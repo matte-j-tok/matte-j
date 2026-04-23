@@ -62,7 +62,7 @@ header{
   font-weight: 600;
 }
 
-.topnav a {
+.topnav a:not(h1) {
     text-transform: uppercase;
     color: #333;
     padding: 2rem;
@@ -208,10 +208,16 @@ section {
     border-radius: 0 0 10px 10px;
 }
 
-article, aside, figure{
+/*article, aside, figure{
     border-radius: 10px;
     padding-bottom:2rem;
     margin: auto;
+}*/
+.left,
+.right {
+    display: block;
+    margin-right:auto;
+    margin-left:auto;
 }
 article ul{
     padding-bottom:1rem;
@@ -230,10 +236,9 @@ article ul{
 }
 .cups{
     background-image: url(_img/matte-j_4-of-cups_1980x2970.webp);
-    background-size: 600px;
+    background-size: 375px;
     background-repeat: no-repeat;
     background-position: 50% 0px; 
-  
 }
 
 footer{
@@ -252,9 +257,44 @@ footer nav{
     margin:auto;
     padding:0 1rem;
 }
+iframe {
+    margin-top: 1rem;
+    display: block;
+    border: none;
+}
+
+/* Om du vill att Spotify-spelaren ska ha din limegröna färg som fokus */
+.spotify-wrapper {
+    border: 2px solid #d7ff00;
+    border-radius: 15px;
+    overflow: hidden;
+}
+/* Behållaren styr proportionerna (16:9) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 8px; /* Matchar din stil */
+    margin-bottom: 1rem;
+}
+
+/* Själva videon fyller behållaren */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .himmelBg{
     background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+}
+.blueBG{
+    width:100%;
+    background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 .cool {
     border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAuNJREFUeF7tmdGWgyAMROn/f/Tu2adt1eNlOgGsnb6OScglhFQfrbWfdq/fY5PO1Pz+gk8NOGHvArQYcoDeHeh2h4vzLXe3bVmz1/8S/6iHzl6QSzhAXYJwi88uiFToyA3tOfJXG6uW3uKttdP4AaqXa4DqzE4tAvTqQJfeogc9rJjXzh2NZfItTw5XJ7Q6foCKO0AFFaBXB1o9p156zhwxh45OeLR/KlCKXz42UUBaMOmj/bvxA5QIbnTa0OlA1TmVblGRh/w4xZf0d/7LqztIGdKCyd7VKb6kB+j+I6VaMOVzKO0gVZBrT/5Jp/iSPqNCpQVR9gW6VYEr5lB3wQXM3n/9RsBIT4V+YA/9uiNPR0wFoh55ij9aL82vZwgvDbjgBTFtSGl+ATqgh07dwW+oUPV9ptoj6UjRhrr61PyOxiZKIEBfCeFfzwA9AfbOYB+gxUB7bv7nkNQjSacNdHU3PtnjkQ/QVOhpEVOF0Qkg+1QoEdzo5UBHz3FifvLjEpAO7+Uf6SimOqeSP1cPUJegc2Q7YqdCN5DoBBHTcqDVYxUl4Orqkbfyq/gEQglTQmTv6hSfdIovj02lARe8vqP1kx6g5qW0/Mi7cypVgKtTBar66XoqemiAPiEOUP2bUipUnEOtOXVEhapN3e2RZK/2SAJ6ml+A6kc+QIuPfIDeDag6VlFPJF3tgaU9dkYPDdDiv24BGqAvBKSWMOPIU89zdUqY/JO9pAeoP4eWvw+lHaQKcXU3PtlLeir0AyrUrTiypzmT7Ekn/8M/0l1tLCJgpAcoERL1ABWB0ePLgdICXZ1uWdc/2VP88rGJFuTqlJDrn+wpfoASQeevd8UcKq5PfpwqRHYoGlB8u0LF9ciP06UgOyw2KJ9Di9e3cxegxYQDNED/CfRcSsW8du6o6Y+O7/qXLyU3INkHKBES9QAVgdHjtwdKAFz96re4ld/RpWQ57DAO0A5IyiMBqtDqePbWQH8Bz2HAFN7nk9cAAAAASUVORK5CYII=') 28 /  28px / 0 round;
@@ -265,7 +305,7 @@ footer nav{
     border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACY0lEQVR4Xu2d0W7DIBAEnf//6FaVKjXGLsuaBTv29JXzcsztEYKl9LXwFyXwiqohtgA0bAKAXgDol8jBLZLSK6dz9cvnh853JDmVkKup9ABqdhFAafn/CbS0Z+kg9YyKV+PK4O7zbrzac6vrV3B+xN2EVLwaB2hBQAFT4wAF6B+BvZbvdVDXHqTsuTOezlelUJ0PoArfdhygPrPqEwC9G9DweqTc6D31dIdKAuEAgAI0TCAsh0MvDtQq0IxzaJiXlLMASDXzLgOgmqhVIIBOADr7u7he0twIy5FlaiPuQ+cuPz8bQMNMAfppQFW+6q1ly7ai5jhz3HJsYrEAfSs3QLX3cahmZEUMB2pNYKX+GcH2fahaFkDXhFbb5pE9FKAAVU1njXe3/NMdad1ttLQ8QNdIcajV0DoYoJqRFWEDpcXrfAFq+U8HA1QzsiIAauHSwQDVjKoR1mfKHd96dvLbPA7QMFGAAjRMoFPOcmQ5F3volj5AOx1p3SapuXDoBIdGK6YqesL40NfeT7wPBWjYxQC9G9C776mqXtYxqmUPBeiaQPcPEAAUoKqLrfF4y1uCDamm9RqmjIbYF8yjWxygBeEjH2TvEgAF6IqA3fKjHTRaP7ph7ogBNEwYoAANEwjLXc6ho49lo/UBOvOUcoVXIKM/9dP6OPRsh6b3INchbrybr6tvxbd8jbQE3YNwIB6g4hgzuoCuvhWPQxf5zxHiQFVLqXNzS9FqGuotZfmsO5/St/Ss4N/MVQK9C5xdQLUei5EVDFDVjHr/2FNQFcWhmjsRrQSOtHyr9iPjABouO0DDQL8BwFvgVTvXm/wAAAAASUVORK5CYII=') 28 /  28px / 0 round;
     border-width:  28px;
     border-style:  solid; 
-    background-color:#e5e3e186;
+    background-color:#bac8e070;
 }
 .sion {
     border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACMElEQVR4Aezd0W6DMBBEUbf//88teQperBmGbFuU3iiVcGbX4BNk8RL1cxxfX9tH/I1x1mDjer5XoM+Uo1gA0JhMNwCqfeL0AVr3io9tlnf625YzvbvXNvk9QKezMXhNANDX/A7dgB5IXvvgDOi0R2ynS8dby63fdT31Yl0+1Z8BnRoYaAFAtU+cAhqT6YYroO45Tp/xfmldT90zay5XcAVUTvjfQ0Cb7wBAbwBa95g6br7EH5+uXn/dM2suL4g7VPLkIaC5mewAVPLk4RnQuqek4/yqfrejrqee3eVT/RnQqYGBFgBU+8QpoDGZbliB1ueujvFfzlEFuq9lmn8FOhUwyAQAzbxsNaCWKCtYgdbnLsZjKIOxf61A9znHoQCgIZgrB9QJhTmgIZgrB9QJhTmgIZgrB9QJhfmdQcOl3KMc0ObvAVBAmwWap+MOBbRZoHk67lBAmwWap+MOBbRZoHk67lBAmwWap3u3O7SZJ58O0NxMdgAqefIQ0NxMdgAqefIQ0NxMdgAqefIQ0NxMdgAqefIQ0NxMdgAqefIQ0NxMdgA6hgRKQ0BTMVMPqAFKY0BTMVMPqAFKY0BTMVMPqAFKY0BTMVMPqAFKY0BTMVMPqAFKY0BTMVO/Au3+Pfk7zrdf00S8Ap0KGGQCgGZethpQS5QVrEDVb8PJxuG382P/WoHuc45DAUBDMFcOqBMK8wdo3Rf3z1gc+/+rNPk9QMPvgHIlAKjSuZABegFNtXwDAAD//zXJppAAAAAGSURBVAMA1Z9gbHBem9wAAAAASUVORK5CYII=') 28 /  28px / 0 round;
@@ -273,6 +313,8 @@ footer nav{
     border-style: solid; 
     background-color:#e5e3e1;
 }
+
+  
  
  .spacer-large {
     height: 20vh;
@@ -285,7 +327,15 @@ footer nav{
         height: 50vh; 
     }
 }
-    #diskografi .item {
+    .left {
+    display: block;
+    margin-right:auto;
+    margin-left:2rem;
+}
+    .right {
+        margin-right:2rem;
+    }
+#diskografi .item {
         column-count: 2;
         column-gap: 3rem;
     }
@@ -362,7 +412,12 @@ footer nav{
     .multiply{
         mix-blend-mode: multiply;
     }
-   
+   .cups{
+    background-image: url(_img/matte-j_4-of-cups_1980x2970.webp);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: 50% 0px; 
+}
     article {
         max-width: 600px;
         width: 100%;
@@ -377,6 +432,7 @@ footer nav{
         padding-left:2rem;
     }
 }
+
 a {
     color: #18272F;
     position: relative;
@@ -415,4 +471,7 @@ footer a::before {
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
+}
+#home:host-context{
+    background-color: #2f2f2e00;
 }
