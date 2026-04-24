@@ -15,19 +15,15 @@
   font-weight: 400;
   src: url(webfonts/JetBrainsMono-Regular.woff2) format('woff2');
 }
-@font-face{
-    font-family: 'JetBrains Mono';
-  font-style: italic;
-  font-weight: 400;
-  src: url(webfonts/JetBrainsMono-Italic.woff2) format('woff2');
-}
+
+
 
 html{
-    font-size: 14px;
-    line-height: 1.55;
+    font-size: 16px;
   -webkit-text-size-adjust: 100%;
  
 }
+
 
 body {
     font-family: 'JetBrains Mono', monospace;
@@ -38,9 +34,9 @@ body {
     background-blend-mode: darken;
     background-size: cover;
     color: #333;
-    line-height:normal;
     overflow-x: hidden;
 }
+
 header{
     width:100%; 
 }
@@ -52,20 +48,21 @@ header{
 }
 
 .topnav {
-  overflow: hidden;
-  background-color:#cdc9c5;
-  position: relative;
+    overflow: hidden;
+    background-color:#cdc9c5;
+    position: relative;
 }
 
 .topnav #myLinks {
-  display: none;
-  font-weight: 600;
+    display: none;
+    font-weight: 600;
+    font-size: .80rem;
 }
 
 .topnav a:not(h1) {
     text-transform: uppercase;
     color: #333;
-    padding: 2rem;
+    padding: 1rem;
     text-decoration: none;
     display: block;
     margin-left: 0rem;
@@ -89,78 +86,64 @@ i{
 
 h1, 
 .active {
-  background-color: #d7ff00;
-  color: #333;
-  text-transform: uppercase;
-  font-size: 2em;
+    background-color: #d7ff00;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 2em;
 }
 
 ul {
     list-style-type: none;
 }
 
-h1,
-h2,h3,h4,h5 {
-    font-family: 'JetBrains Mono', monospace;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
+h1,h2{
+    text-transform: uppercase;
 }
-h1 {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
-    color: #333;
-    text-align: left;
-    display: block;
-    font-size: 2em;
-    margin:0; 
+
+h1, h2,h3 {
+    font-family: "IBM Plex Sans", sans-serif;    
+    font-size: inherit;
+    font-weight: 900;
 }
 
 h2  {
     font-family: "IBM Plex Sans", sans-serif;
     color: #333;
     display: block;
+    font-size: 1.875rem;
+    line-height: 1.3;
+    text-transform: uppercase;  
     font-size: 1.5em;
-    margin-block-start:2rem;
-    margin-block-end: 1em;
-    margin-inline-start: 0;
-    font-weight: 600;
-    text-transform: uppercase;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;  
 }
 
-h3  {
-    display: block;
+h3{
     font-size: 1.17em;
-    margin-block-start: 0;
-    margin-bottom: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    font-weight: 600;
+    line-height: 1.55;
+    margin-block-start: .5em;
+    margin-block-end: .25em;
+    font-weight: 600;  
 }
 
 h4 {
+    font-family: 'JetBrains Mono', monospace;
     font-optical-sizing: auto;
-    font-weight: normal;
+    font-weight: 900;
     font-style: normal;
     color: #333;
     display: block;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1.33em;
     text-transform: uppercase;   
 }
-.versal{
+.caps{
     text-transform: uppercase;
 }
-
 h5 {
     display: block;   
     font-optical-sizing: auto;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 600;
     font-style: normal;
     color: rgba(35, 35, 35, 0.5);
@@ -170,12 +153,11 @@ h5 {
     text-transform: uppercase;
 }
 p {
-    font-size: unset;
-    display: block;
-    margin-block-end: 1em;
-    margin-top:4px;
-    margin-inline-end: 0px;
-    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top:.5rem;
+    margin-bottom: .5rem;
+   
 }
  
 img {
@@ -184,13 +166,10 @@ img {
     max-width: 100%;
     height: auto;
     margin:auto;
-    }
-
-.opacity-50{
-  opacity: .5;
 }
-
-
+.opacity-50{
+    opacity: .5;
+}
 main {
     width: 100%;
     height:auto;
@@ -204,23 +183,15 @@ main {
    
 section {
     background-color: #cdc9c5;
-    padding:0 2rem;
+  /*  padding:0 2rem;*/
     border-radius: 0 0 10px 10px;
 }
 
-/*article, aside, figure{
-    border-radius: 10px;
-    padding-bottom:2rem;
-    margin: auto;
-}*/
 .left,
 .right {
     display: block;
     margin-right:auto;
     margin-left:auto;
-}
-article ul{
-    padding-bottom:1rem;
 }
 
 .flex-container, .flex-end {
@@ -228,7 +199,6 @@ article ul{
 }
 
 .gatuslang {
-    max-width: 600px;
     width: 100%;
     height: auto;
     margin:auto;
@@ -255,32 +225,36 @@ footer{
 }
 footer nav{
     margin:auto;
-    padding:0 1rem;
+    padding:0 8px;
 }
 iframe {
-    margin-top: 1rem;
+   /* margin-top: 1rem;*/
     display: block;
     border: none;
 }
 
-/* Om du vill att Spotify-spelaren ska ha din limegröna färg som fokus */
+datetime {
+    font-size: .80rem;
+    color: rgba(35, 35, 35, 0.5);
+    display: block;
+    margin-top: 1rem;
+}
+
 .spotify-wrapper {
     border: 2px solid #d7ff00;
     border-radius: 15px;
     overflow: hidden;
 }
-/* Behållaren styr proportionerna (16:9) */
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 ratio */
     height: 0;
     overflow: hidden;
     max-width: 100%;
-    border-radius: 8px; /* Matchar din stil */
-    margin-bottom: 1rem;
+    border-radius: 18px; 
 }
 
-/* Själva videon fyller behållaren */
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -288,7 +262,6 @@ iframe {
     width: 100%;
     height: 100%;
 }
-
 .himmelBg{
     background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
 }
@@ -313,10 +286,33 @@ iframe {
     border-style: solid; 
     background-color:#e5e3e1;
 }
-
-  
- 
- .spacer-large {
+.broider {
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAASUlEQVQ4T2NkoAFgpIGZDKOGUj9UR8N0NEypHAJ0T1L/gR7AZylOeXJcSsgykkspggaCoocUlxJlICmGEm0gsYaSZCCxhpKcigFqJgcWYuQWiQAAAABJRU5ErkJggg==") 7 /  7px / 0 round;
+    border-width:  7px;
+    border-style:  solid;
+    margin:2rem 0;
+}
+.swirlt {
+    border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAoVJREFUeF7tnNtywyAMRMn/f3Q7eYuxi7SsIE5z+pZhEdLRxSTT8aO19tOOf4/uMx/HBA78nvAA6pUMQD1+p90AXQ20t88IEGZma+3wzLl6AAEUoMVNDNB7A/22mdqPuCg7w3t65hL/32cqQKMSEtcBKgKL5G8HGjkYrWfGTGTDWY9GWLQ+PDsTnJrBKNjMmZENZz0CFq0DtCMQAYvWAXp3oG7LWhUw0evqear+4FIGjnXABYBqexFj9TxVD9AgAwAtBrQc6Orv9lYAC0aK5U9mhgI0mtIv6wA9w6JCxXtmVG/bge4eARGAfn2m615tALQjCtCgZalQlQBAx8SsGWQmY2Z7qb/uvLkKoNTBGULinlJ/AVr8z3IA/QCgq++pYkef5KUtXn0JzgS3NICMA8XfpIZHrmh5KnQiy8oWKlShldC+G+jW87+h5QGaqHpFAlCFVkIL0AQkRQJQhVZCC9AEJEUCUIVWQgvQBCRFAlCFVkIL0AQkRQJQhVZC+/FAtwYA0ASBYsnWBK/4cWRrAAn4W/0BaCIjiqQC6NYKUIL7Q7vUX4B2LxBwEwZQgLo1tPYtQDMVWj2DensqsZkYXs8ojWfGmVIHLt4bBVCVQKenQjsgM1U+ajk1P9XnW/ZmNrst7+7vgd/KHkDP/WAlCKAAPRGwKupiYFv2dlSo5aD6hFrw+k7Jf4DGGQPo4mud/WYx95oiZTgumFBRfZ5kb0XLSw6EeHyB+02s92B7hQJULIIIWLQuHmfLqVAb4dHA7YCqDs3M5WKGpeakjssED9BjfuyHEkABeq+Wl2ZGqeufYWzI52oeAHScWIAWFz5AdwOlxT3iB37PGQpQgHoEindToSuB/gI8cthNb4glhwAAAABJRU5ErkJggg==') 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid; 
+}
+.skibidi {
+    border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAnZJREFUeF7tnEFWwzAMBds7sOFUnJVTseEOsLbzyORXStKUYVvZksdfv45ber9d/O/78+vnyCW8fbzf1/KtvnhkoY/mEuij5P4YJ1CBrhPoVgh5VHe+dH+pvrKHdi+QCu7OJ9CD39Vn4LThKjSUKAI9u4VIAd31ERDKR+PvNEG4geXwueDu+ggI5aPxAp0kINCwJ0hhpwOlAuf1pgWn8SHfRXg1X7nlBTruiUCfzUNVaKjQFBh5WOpRaTzlT19P82PLC3T9AnvmI1CQrApNe1qgI4FuS6qem215FapCBwKpyafxzRZ6S/Njy9N9ZboAKjCd73IeKtDmc6hABZq6xmo8WVT8pNSt0NbVbpiMgGyYYjVEoFWC03iBCrRGwJav8VuMFqhAmwk0T6dCrw40vf+rrnfvZ29az975F9++O7pFqhtE4+f1CJSIhRfEAr06UPKg4vpueyvk7PrxG8zdnirQ5u+0C1Sgg4uQILDlq5559LFlbw+l+2GBFhWzuA8tzofDVSgiygL+PdDuYxJ5TrY9x0enPF7+Wb66BQKtEpzGC1SgzQSap1OhAm0m0DydCr0aULocqK4nVQTlq9ab1hOfQ6sFEoB0ATRftd60HoGGn0nRBgr0vwNNf0Kj2vLp/erlFCpQMp3w2VmgAs3+6yHkheF0TFGhiHAMEGgIjMIFSoTC118OaHruOvqct7eH0oaSPvBzeUog0BGxQMNzsAqFn0lPLe50oGQZVOD8euqh6fzV+N1bXqChp9CbkkAFWur6csuXsm8YfHYHbChxCBHoRIw2kAALVKDZ7RQpio5l6finU2i15VIA3fECbSYqUIE2E2ie7hdD4HLWseq7GwAAAABJRU5ErkJggg==') 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid;
+}
+.lightning {
+    border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAmtJREFUeF7tnUtyxCAMBT3L3P+wWU7WhpS7XkngcdLZSjCieZIw88nr/X28j+Dv9XW8Avc/7zryewm0tucCrfGbRgt0NVCa35JwTWhSqECJgEBrhMLRKjQERu4x0HRC8n/6OZZ6SvmQTi8wAhYoSE6gZ0AqlGrUYCcBlYFSPBTA00rC1ISGuw2BkiJAoWNPEKhAQwLN7ren/LietKbeXWMp3u0pL9DmFBGoQE8EHpfy9ChKC1pdY6kJTa+/WJDT9GmAAg2f/VVoUdIqtBlgd83rLgk0H2XU7Y+eFCDtJwFIN5Dmo3gFml7PwSdnBPp0oJQylOKpnVKY5kvj3a7QNEBaMNkFSoRCu0BDYOT+eKC0gN0pXwWextteQwVKWxjaBRoCI3eBEqHQnl5+hNO3u3fHu7yGpkW9nVjzdSLFJ9DhWzBVAQj004D+9ybU/p6SQM9IyykvUIFefhXz9qbUfY6jY0nVvjre9pSv7nAVGI0XKBEK7QINgZH7xwG1q19vWVxDBSrQpcek8pOSCt2sUGoKu49Vq5vQcoUKlAgMdkp5mk6FCpQ0crLjsYkUSYqj8VMNKv4uFL0exRvR+8VZoFWCw3iBCvSawONSvrsGEYC0xu4+d8bn0NUBCrTYhccdFahAL4v41OVJMd01lJosxUPjd8crUNqR0C7QEBi5C5QIhXYEursGhfEfaY1dvR6BpjsI/gIV6JnAx6U8BbS65jQLZJqO1pfeFVC8+Dv2AiWEZ7tAxwvi4qO1QFcDfXqKZwl6tJ9jJ4UK9HpLiI9Am/9bj0AFmlbJmn98jl39nlFtOfePFmjzHgj0ZqA/aaMnw/l+3ZQAAAAASUVORK5CYII=') 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid;
+}
+.lightning2 {
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACfUlEQVR4Xu2cUY7DMAgFk+Ps/Q/T43S/60gZPYHdJpn9BRM8PGOUbru/3tt7C/7+9m0P3G/vOvLbBVqruUBr/A6rBTobKMW3JZwTOihUoERAoDVC4WoVGgIj9xhoGpD8rz7H0p1SHtLpASNggYLkBPoJSIVSjxrsJKAyUMqHErhaSxj3M7YwgZIiQKECDQGO7iq0CPDngFJC6X5Xj110Byw/8gJNJRP6U8UpnAoN5ziBEoFw7Ki2iG4F060+5jt9DiVABCBtERQvrP8m0OZPZQV6d6B0ZKtHlOKn7wooHuU7vYdWE6SeR/EFSgSLYxgpjApE61VoWKCfA0oJhQJFd1IcBUjzXa7QNEHaMNkFSoRCu0BDYOR+eaC0gdVHvgo8zbe9hwqUShjaBRoCI3eBEqHQnr6dCcO3u3fnO72Hpk29nRgEFGgzcYHeHejTL6H2z5QE+om0fCkJVKCnX8WsTiXtCq0m1HznHMJ13+rTe6hAi5KYXfFieiq0G+AYb7YA4h7qrX5ecoE2/6eJQAWaddnVLapdobTd1WPV7EuoPIdSxQVKBAa7QBff8lSfxx95UiQBovVjASgeFYyeV41Pz8dLqZogrRfoQIAqLtDwEhJo+IJ59hzXreDZ+bb3UFIkPZDe/tB6er5Am38dUqB3B0o9jY4cHdnUTvlQvNX5HuZQ2sDqBCkfgRKBcGyjcKsFoEKpIqEdga6ucJj/4evXtH72fgRKFQjtAg2BkbtAiVBox59dn91zwnxj93Tsqu5XoOHrSKqoQAVKGvm0f/3IV3tItt3ve3cDPxx5gZ4XmfgItPn1oUAFurbvpj328Qql8giUCIV2gYbAyD0F+g9a8CXDjY3cowAAAABJRU5ErkJggg==") 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid;
+}
+.spacer-large {
     height: 20vh;
 } 
 
@@ -330,14 +326,14 @@ iframe {
     .left {
     display: block;
     margin-right:auto;
-    margin-left:2rem;
+    margin-left:3rem;
 }
     .right {
-        margin-right:2rem;
+        margin-right:3rem;
     }
 #diskografi .item {
         column-count: 2;
-        column-gap: 3rem;
+        column-gap: 4rem;
     }
   
     #diskografi .item h2 {
@@ -359,7 +355,6 @@ iframe {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 2rem;
         background:#d7ff00;
     }
 
@@ -382,6 +377,9 @@ iframe {
     }
     nav ul{
         display:inline-block;
+    }
+    p {
+        line-height: 1.7;
     }
 
     .mobile-container{
@@ -413,17 +411,18 @@ iframe {
         mix-blend-mode: multiply;
     }
    .cups{
-    background-image: url(_img/matte-j_4-of-cups_1980x2970.webp);
-    background-size: 600px;
-    background-repeat: no-repeat;
-    background-position: 50% 0px; 
+        background-image: url(_img/matte-j_4-of-cups_1980x2970.webp);
+        background-size: 768px;
+        background-repeat: no-repeat;
+        background-position: 50% 0px; 
 }
     article {
-        max-width: 600px;
+        max-width: 800px;
         width: 100%;
         margin: auto;
         display: block;
-        padding-left: 1rem; 
+        padding: 1rem;
+        
 }
 
     aside {
@@ -435,6 +434,7 @@ iframe {
 
 a {
     color: #18272F;
+    font-weight: 600;
     position: relative;
     text-decoration: none;
 }
