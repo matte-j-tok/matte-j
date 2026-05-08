@@ -275,10 +275,12 @@
       <div class="spacer-large"></div>
     </main>
     
+ 
+   
     <footer class='caps' id="links">
-      <div class="spacer-large"></div>
       <nav aria-labelledby="footer-navigation">
-        <ul class="item">
+         <ul class="item">
+          <li><h4>Musik</h4>
           <li><h5>Soundcloud</h5></li>
           <li><a href="https://soundcloud.com/matte-js">Matte Js</a></li>
           <li><a href="https://soundcloud.com/tokdjmattej">DJ Matt€ J</a></li>
@@ -294,8 +296,10 @@
           <li><h5>Youtube</h5></li>
           <li><a href="https://www.youtube.com/@GTVgokbotsofficiella">GTV Gökbot</a></li>
           <li><a href="https://www.youtube.com/watch?v=dZmdt-ZGwfg">Matt€ J + NMB + Ivory</a></li>
-        </ul>
-        <ul class="item">
+         </ul>
+
+         <ul class="item">
+          <li><h4>Sociala Medier</h4></li>
           <li><h5>Instagram</h5></li>
           <li><a href="https://www.instagram.com/gok.bot">Gökbot</a></li>
           <li><a href="https://www.instagram.com/den_riktiga_mattej/">Matte J</a></li>
@@ -305,19 +309,34 @@
           <li><a href='facebook.com'>STHLM Inkasso</a></li>
         </ul>
 
-        <ul>
-         <li><h5>Samarbeten</h5></li>
+        <ul class="item">
+         <li><h4>Partners</h4></li>
+         <h5>samarbetspartners och vänner</h5>
          <li><a href="https://www.instagram.com/galleri.grona.gumman">Galleri Gröna Gumman</a></li>
          <li><a href="https://www.instagram.com/studiomatiam/">Studio Matiam</a></li>
         </ul>
-        <ul>
-          <li><h5 id="kontakt">kontakt</h5></li>
-          <li>gokbotkoko[at]gmail[dot]com</li>
+
+        <ul class="item">
+          <li><h4>kontakt</h4></li>
+          <li><h5>för bokningar och samarbeten</h5></li>
+          <li class="tooltip" id="kontakt" onclick="copyAndShowTooltip(this, 'gokbotkoko@gmail.com')" title="Kopiera e-mailadress">klicka här<span class="tooltiptext" id="myTooltip">Kopierat</span></li>
         </ul>
-      
       </nav>
-       <div style="background-color: black; height:300px; margin-top: 5rem;"></div>
+       <div style="background-color: black; height:200px; margin-top: 5rem;"></div>
     </footer>
+    <script>
+    function copyAndShowTooltip(element, text) {
+      navigator.clipboard.writeText(text);
+  
+    // Visa tooltip
+      element.classList.add("show");
+  
+    // Dölj tooltip efter 2 sekunder
+      setTimeout(function() {
+      element.classList.remove("show");
+  }, 2000);
+}
+</script>
       
      
 <script>
