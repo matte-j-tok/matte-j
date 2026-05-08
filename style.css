@@ -16,14 +16,11 @@
   src: url(webfonts/JetBrainsMono-Regular.woff2) format('woff2');
 }
 
-
-
 html{
     font-size: 16px;
   -webkit-text-size-adjust: 100%;
  
 }
-
 
 body {
     font-family: 'JetBrains Mono', monospace;
@@ -100,7 +97,7 @@ h1,h2{
     text-transform: uppercase;
 }
 
-h1, h2,h3 {
+h1, h2,h3, h4 {
     font-family: "IBM Plex Sans", sans-serif;    
     font-size: inherit;
     font-weight: 900;
@@ -127,14 +124,15 @@ h3{
 }
 
 h4 {
-    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.6rem;
     font-optical-sizing: auto;
-    font-weight: 900;
+    font-weight: 600;
     font-style: normal;
-    color: #333;
+    line-height: 1.3;
+    color: #33333345;
     display: block;
     margin-block-start: 1em;
-    margin-block-end: 1.33em;
+    margin-block-end: 0;
     text-transform: uppercase;   
 }
 .caps{
@@ -143,7 +141,7 @@ h4 {
 h5 {
     display: block;   
     font-optical-sizing: auto;
-    font-size: 1rem;
+   font-size:1rem;
     font-weight: 600;
     font-style: normal;
     color: rgba(35, 35, 35, 0.5);
@@ -210,6 +208,36 @@ section {
     background-repeat: no-repeat;
     background-position: 50% 0px; 
 }
+/* tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    font-family: 'IBM Plex Sans', sans-serif;
+  font-size: .85em;
+  visibility: hidden;
+  width: auto;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Placera ovanför */
+  left: 50%;
+  margin-left: -70px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip.show .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
 
 footer{
     position:relative;
@@ -219,7 +247,8 @@ footer{
     margin: 0 auto;
     height:100vh;
     border-radius: 10px;
-    color:#252424;
+    color:#33333391;
+    line-height: 1.66;
     background-color: #d7ff00;
     overflow-x: hidden;
 }
@@ -331,7 +360,7 @@ datetime {
     .right {
         margin-right:3rem;
     }
-#diskografi .item {
+    #diskografi .item {
         column-count: 2;
         column-gap: 4rem;
     }
@@ -430,6 +459,7 @@ datetime {
         display: inline-block;
         padding-left:2rem;
     }
+   
 }
 
 a {
@@ -463,14 +493,21 @@ footer a::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 1px;
     border-radius: 4px;
-    background-color: #2f2f2ead;
+    background-color: #333;
     bottom: 0;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
+
+}
+footer  a{
+    color: #33333391;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
 }
 #home:host-context{
     background-color: #2f2f2e00;
