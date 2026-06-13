@@ -186,6 +186,73 @@ article{
     background: #000000;
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(48, 48, 48) 50%, rgba(0, 0, 0, 1) 100%);
 }
+
+/* =========================================
+     CONTACT FORM
+     ========================================= */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-variation-settings: 'wght' 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #555;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #b3b3b3;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  /* Hover & Fokus effekter */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+  }
+
+  .contact-form button[type="submit"] {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  
+    background: var(--bg-color);
+    color: #636363;
+    border: .5px solid rgb(185, 185, 185);
+    padding: 8px 24px;
+    border-radius: 20px;
+  }
+  .contact-form button:hover{
+    background-image: radial-gradient(#fefbfc 0%, #e1dfdf 100%);
+  }
+  
+  /* Begränsa bredden på formuläret på större skärmar */
+  @media (min-width: 768px) {
+    .contact-form {
+      max-width: 80%; 
+    }
+  }
 .left,
 .right {
     display: block;
