@@ -246,6 +246,7 @@ article{
   margin-bottom: 1rem;
   letter-spacing: 1.8px;
   font-weight: 500;
+  transition: all 04s cubic-bezier(0.42, 0, 0.58, 1);
   }
   .contact-form button:hover{
     background-image: radial-gradient(#fefbfc 0%, #e1dfdf 100%);
