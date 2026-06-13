@@ -193,6 +193,7 @@ article{
   .contact-form {
     display: flex;
     flex-direction: column;
+    justify-content:center;
     gap: 1.5rem;
     margin-top: 2rem;
     width: 100%;
