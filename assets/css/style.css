@@ -100,10 +100,8 @@ a::before {
     
     a:hover::before {
         transform-origin: left;
-        transform: scaleX(1); /* Och hover-animationen funkar! */
+        transform: scaleX(1);
     }
-    
-    /* ... resten av din desktop-kod ... */
 }
 */
 .topnav a.icon {
