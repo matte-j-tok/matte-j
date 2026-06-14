@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrainsMono-Regular';
   font-style: normal;
   font-weight: 400;
   src: url(assets/webfonts/JetBrainsMono-Regular.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrainsMono-SemiBold';
   font-style: normal;
   font-weight: 600;
   src: url(assets/webfonts/JetBrainsMono-SemiBold.woff2) format('woff2');
