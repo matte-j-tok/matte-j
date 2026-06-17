@@ -157,9 +157,9 @@ h2,h3, h4, h5 {
 h2  {
     color: #333;
     display: block;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     line-height: 1.8;
-    margin-top: 1.8rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -168,6 +168,7 @@ h3{
     margin-top:1rem;
     margin-bottom: 1rem;
     line-height: 1.3;
+    padding:0 2rem;
 }
 
 h4 {
@@ -253,7 +254,7 @@ main {
     background-attachment: fixed; 
 }
    
-section:not(#galleri) {
+section:not(#galleri,#diskografi) {
    background-color: #cdc9c5;
    padding:1rem 4px;
     margin:auto;
@@ -329,6 +330,7 @@ section:not(#galleri) {
 .darkBg{
     background: #000000;
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgb(48, 48, 48) 50%, rgba(0, 0, 0, 1) 100%);
+    border-radius: 8px 8px;
 }
 .left,
 .right {
@@ -437,7 +439,9 @@ time {
     width: 100%;
     height: 100%;
 }
-
+.transp{
+    background-color: transparent;
+}
 .himmelBg{
     background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
 }
@@ -488,6 +492,10 @@ time {
     border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAAAAXNSR0IArs4c6QAAAmtJREFUeF7tnUtyxCAMBT3L3P+wWU7WhpS7XkngcdLZSjCieZIw88nr/X28j+Dv9XW8Avc/7zryewm0tucCrfGbRgt0NVCa35JwTWhSqECJgEBrhMLRKjQERu4x0HRC8n/6OZZ6SvmQTi8wAhYoSE6gZ0AqlGrUYCcBlYFSPBTA00rC1ISGuw2BkiJAoWNPEKhAQwLN7ren/LietKbeXWMp3u0pL9DmFBGoQE8EHpfy9ChKC1pdY6kJTa+/WJDT9GmAAg2f/VVoUdIqtBlgd83rLgk0H2XU7Y+eFCDtJwFIN5Dmo3gFml7PwSdnBPp0oJQylOKpnVKY5kvj3a7QNEBaMNkFSoRCu0BDYOT+eKC0gN0pXwWextteQwVKWxjaBRoCI3eBEqHQnl5+hNO3u3fHu7yGpkW9nVjzdSLFJ9DhWzBVAQj004D+9ybU/p6SQM9IyykvUIFefhXz9qbUfY6jY0nVvjre9pSv7nAVGI0XKBEK7QINgZH7xwG1q19vWVxDBSrQpcek8pOSCt2sUGoKu49Vq5vQcoUKlAgMdkp5mk6FCpQ0crLjsYkUSYqj8VMNKv4uFL0exRvR+8VZoFWCw3iBCvSawONSvrsGEYC0xu4+d8bn0NUBCrTYhccdFahAL4v41OVJMd01lJosxUPjd8crUNqR0C7QEBi5C5QIhXYEursGhfEfaY1dvR6BpjsI/gIV6JnAx6U8BbS65jQLZJqO1pfeFVC8+Dv2AiWEZ7tAxwvi4qO1QFcDfXqKZwl6tJ9jJ4UK9HpLiI9Am/9bj0AFmlbJmn98jl39nlFtOfePFmjzHgj0ZqA/aaMnw/l+3ZQAAAAASUVORK5CYII=') 28 /  28px / 0 round;
     border-width:  28px;
     border-style:  solid;
+    border-bottom:0px;
+    filter:grayscale(100);
+    background-color: #333;
+
 }
 .lightning2 {
     border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACfUlEQVR4Xu2cUY7DMAgFk+Ps/Q/T43S/60gZPYHdJpn9BRM8PGOUbru/3tt7C/7+9m0P3G/vOvLbBVqruUBr/A6rBTobKMW3JZwTOihUoERAoDVC4WoVGgIj9xhoGpD8rz7H0p1SHtLpASNggYLkBPoJSIVSjxrsJKAyUMqHErhaSxj3M7YwgZIiQKECDQGO7iq0CPDngFJC6X5Xj110Byw/8gJNJRP6U8UpnAoN5ziBEoFw7Ki2iG4F060+5jt9DiVABCBtERQvrP8m0OZPZQV6d6B0ZKtHlOKn7wooHuU7vYdWE6SeR/EFSgSLYxgpjApE61VoWKCfA0oJhQJFd1IcBUjzXa7QNEHaMNkFSoRCu0BDYOR+eaC0gdVHvgo8zbe9hwqUShjaBRoCI3eBEqHQnr6dCcO3u3fnO72Hpk29nRgEFGgzcYHeHejTL6H2z5QE+om0fCkJVKCnX8WsTiXtCq0m1HznHMJ13+rTe6hAi5KYXfFieiq0G+AYb7YA4h7qrX5ecoE2/6eJQAWaddnVLapdobTd1WPV7EuoPIdSxQVKBAa7QBff8lSfxx95UiQBovVjASgeFYyeV41Pz8dLqZogrRfoQIAqLtDwEhJo+IJ59hzXreDZ+bb3UFIkPZDe/tB6er5Am38dUqB3B0o9jY4cHdnUTvlQvNX5HuZQ2sDqBCkfgRKBcGyjcKsFoEKpIqEdga6ucJj/4evXtH72fgRKFQjtAg2BkbtAiVBox59dn91zwnxj93Tsqu5XoOHrSKqoQAVKGvm0f/3IV3tItt3ve3cDPxx5gZ4XmfgItPn1oUAFurbvpj328Qql8giUCIV2gYbAyD0F+g9a8CXDjY3cowAAAABJRU5ErkJggg==") 28 /  28px / 0 round;
@@ -608,8 +616,6 @@ time {
             display: block;
             visibility: visible;
         }
-      
-
        
         footer a{
             font-size: .85rem;
@@ -642,10 +648,10 @@ time {
             background-image: url("/assets/img/matte-j_4-of-cups_1200.webp");
             background-size: 768px;
             background-repeat: no-repeat;
-            background-position: 50% 0px; 
+            background-position:top; 
         }
        article:not(.gallery) {
-           width: 768px;
+           width: 800px;
             margin: auto;
             display: block;
             padding: 1rem;     
@@ -698,7 +704,7 @@ footer a{
 .gallery {
   position: relative;
   width: 100%;
-  height: 800px; 
+  height: 600px; 
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -734,12 +740,12 @@ footer a{
 
 .actions {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 101;
   display: flex;
-  gap: 10px;
+  gap: 9px;
 }
 
 .actions button {
